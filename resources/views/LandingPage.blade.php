@@ -3,9 +3,10 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Landing Page</title>
+    <title>W A P</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
+    <link href="{{ asset('assets/img/unib.png') }}" rel="icon">
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com" rel="preconnect">
     <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
@@ -49,8 +50,9 @@
     <!-- Header -->
     <header id="header" class="header d-flex align-items-center fixed-top">
         <div class="container-fluid container-xl position-relative d-flex align-items-center">
-            <a href="{{ url('/') }}" class="logo d-flex align-items-center me-auto">
-                <h1 style="color: #dda04d;">W A P</h1>
+            <a href="{{ url('/dashboard') }}" class="logo d-flex align-items-center me-auto">
+                <img src="{{ asset('assets/img/unib.png') }}" alt="">
+                <h1 style="color: #dda04d;"> W A P </h1>
             </a>
             <nav id="navmenu" class="navmenu">
                 <ul>

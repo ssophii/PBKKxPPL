@@ -17,6 +17,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/landingpage', function () {
-    return view('LandingPage');
-});
+route::get('/dashboard', [App\Http\Controllers\LandingPageController::class, 'index']);
