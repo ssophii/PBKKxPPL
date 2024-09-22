@@ -18,3 +18,4 @@ Route::get('/', function () {
 });
 
 route::get('/dashboard', [App\Http\Controllers\LandingPageController::class, 'index']);
+

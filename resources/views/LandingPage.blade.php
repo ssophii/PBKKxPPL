@@ -8,13 +8,13 @@
     <meta name="keywords" content="">
     <link href="{{ asset('assets/img/unib.png') }}" rel="icon">
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com" rel="preconnect">
-    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Jost:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com" rel="preconnect">
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Jost:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <!-- Vendor CSS Files -->
-    <link href="{{ asset('assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('assets/vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
-    <link href="{{ asset('assets/vendor/aos/aos.css') }}" rel="stylesheet">
+        <link href="{{ asset('assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+        <link href="{{ asset('assets/vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
+        <link href="{{ asset('assets/vendor/aos/aos.css') }}" rel="stylesheet">
     <!-- Main CSS File -->
     <link rel="stylesheet" href="{{ asset('assets/css/app.css') }}">
     <style>
@@ -73,13 +73,13 @@
                 <div class="row gy-4">
                     <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center" data-aos="zoom-out">
                         <h1>Jadi Asisten Dosen Praktikum? Yuk, Daftar Sekarang!</h1>
-                        <p>We are team of talented designers making websites with Bootstrap</p>
+                        <p>Banyak manfaatnya loh!</p>
                         <div class="d-flex">
                             <a href="#about" class="btn-get-started">Daftar Sekarang</a>
                         </div>
                     </div>
                     <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-out" data-aos-delay="200">
-                        <img src="{{ asset('assets/img/hero-img.png') }}" class="img-fluid animated" alt="">
+                        <img src="{{ asset('assets/img/hero.png') }}" class="img-fluid animated" alt="">
                     </div>
                 </div>
             </div>
@@ -94,7 +94,8 @@
     </main>
 
     <!-- Scroll Top -->
-    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
+        <i class="bi bi-arrow-up-short"></i></a>
 
     <!-- Preloader -->
     <div id="preloader"></div>
