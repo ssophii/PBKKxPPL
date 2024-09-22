@@ -1,0 +1,134 @@
+/* Global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #1F1D2B;
+    color: #fff;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Navbar */
+.header {
+    background-color: #242333;
+    padding: 20px 0;
+}
+
+.navbar-brand {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23FFF' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.navbar-nav .nav-link {
+    color: #B8B9CE;
+    font-weight: 500;
+    margin-right: 15px;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #fff;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #4A3F8F, #19192D);
+    padding: 100px 0;
+    text-align: center;
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    color: #B8B9CE;
+    margin-bottom: 30px;
+}
+
+.btn-primary {
+    background-color: #5865F2;
+    border: none;
+    color: #fff;
+    padding: 12px 30px;
+    font-size: 1rem;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #4A5CE2;
+}
+
+/* Informasi Section */
+.informasi {
+    background-color: #25243A;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.informasi-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.informasi-text {
+    font-size: 1.2rem;
+    color: #B8B9CE;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Call to Action Section */
+.call-to-action {
+    background-color: #3B3A5C;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.call-to-action-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.call-to-action-text {
+    font-size: 1.2rem;
+    color: #B8B9CE;
+    max-width: 700px;
+    margin: 0 auto 40px;
+}
+
+/* Footer */
+.footer {
+    background-color: #242333;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.footer-text {
+    color: #B8B9CE;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+}
