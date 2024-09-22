@@ -50,7 +50,7 @@
     <header id="header" class="header d-flex align-items-center fixed-top">
         <div class="container-fluid container-xl position-relative d-flex align-items-center">
             <a href="{{ url('/') }}" class="logo d-flex align-items-center me-auto">
-                <h1 class="sitename">W A P</h1>
+                <h1 style="color: #dda04d;">W A P</h1>
             </a>
             <nav id="navmenu" class="navmenu">
                 <ul>
@@ -85,18 +85,11 @@
         <section style="padding-top: 0cm; padding-bottom: 0cm; position: fixed; bottom: 0; width: 100%; align-items: center" >
             <footer id="footer" class="footer" >
                 <div class="container copyright text-center">
-                    <p>© <span>Copyright</span> <strong class="px-1 sitename">{{ config('app.name') }}</strong> <span>All Rights Reserved</span></p>
+                    <p><strong class="px-1">INFORMATIKA</strong> <span>2024</span></p>
                 </div>
             </footer>
         </section>
     </main>
-
-    <!-- Footer -->
-    {{-- <footer id="footer" class="footer">
-        <div class="container copyright text-center">
-            <p>© <span>Copyright</span> <strong class="px-1 sitename">{{ config('app.name') }}</strong> <span>All Rights Reserved</span></p>
-        </div>
-    </footer> --}}
 
     <!-- Scroll Top -->
     <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
