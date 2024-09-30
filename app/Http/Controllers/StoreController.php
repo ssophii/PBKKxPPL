@@ -5,14 +5,15 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Profil;
 
-class CreateController extends Controller
+class StoreController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return view('create');
+        $data = Profil::all();
+        return view('store', compact('data'));
     }
 
     /**
@@ -20,7 +21,7 @@ class CreateController extends Controller
      */
     public function create()
     {
-        return view('create');
+        //
     }
 
     /**
@@ -28,8 +29,23 @@ class CreateController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'nama' => 'required',
+            'npm' => 'required',
+            'semester' => 'required',
+            'ip_semester' => 'required',
+            'email' => 'required',
+            'telepon' => 'required',
+            'jenis_kelamin' => 'required',
+            'tanggal_lahir' => 'required',
+            'aktif' => 'required',
+        ]);
+        $profil = Profil::create($request->all());
+        if($profil) {
+            return redirect()->route('store')->with('success', 'Data profil berhasil ditambahkan');
+        }
     }
+
 
     /**
      * Display the specified resource.

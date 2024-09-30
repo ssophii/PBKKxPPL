@@ -413,7 +413,7 @@
                     <p class="card-description">
                       Mohon diisi dengan data sebenarnya
                     </p>
-                    <form action="{{route('index')}}" method="POST" class="forms-sample">
+                    <form action="{{route('store')}}" method="POST" class="forms-sample">
                       @csrf
                       <div class="form-group">
                         <label for="nama">Nama</label>

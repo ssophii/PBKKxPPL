@@ -1,5 +1,9 @@
 <?php
 
+// use App\Http\Controllers\IndexController;
+// use App\Http\Controllers\CreateController;
+// use App\Http\Controllers\StoreController;
+use App\Http\Controllers\ProfilController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,10 +20,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/create', function () {
-    return view('create');
-});
 
-route::get('/index', [App\Http\Controllers\IndexController::class, 'index']);
-route::get('/dashboard', [App\Http\Controllers\LandingPageController::class, 'index']);
-route::post('/store', [App\Http\Controllers\CreateController::class, 'store']);
+// Route::get('/index',[IndexController::class, 'index'])->name("profil");
+// Route::get('/create',[CreateController::class, 'create'])->name("create");
+// Route::post('/store',[StoreController::class, 'store'])->name("store");
+
+Route::get('/profil', [ProfilController::class, 'index'])->name('profil');
+Route::get('/create', [ProfilController::class, 'create'])->name('create');
+Route::get('/store', [ProfilController::class, 'store'])->name('store');
