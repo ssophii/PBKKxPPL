@@ -16,6 +16,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/create', function () {
+    return view('create');
+});
 
+route::get('/index', [App\Http\Controllers\IndexController::class, 'index']);
 route::get('/dashboard', [App\Http\Controllers\LandingPageController::class, 'index']);
-
+route::post('/store', [App\Http\Controllers\CreateController::class, 'store']);
