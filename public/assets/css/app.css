@@ -33,7 +33,7 @@
   
   .dark-background {
     --background-color: #14246c;
-    --default-color: #ffffff;
+    --default-color: #14246c;
     --heading-color: #ffffff;
     --surface-color: #4668a2;
     --contrast-color: #ffffff;
@@ -79,8 +79,8 @@
   # Global Header
   --------------------------------------------------------------*/
   .header {
-    --background-color: #3d4d6a;
-    --heading-color: #ffffff;
+    --background-color: #14246c;
+    --heading-color: #14246c;
     color: var(--default-color);
     background-color: var(--background-color);
     padding: 15px 0;

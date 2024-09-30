@@ -17,5 +17,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/index', function () {
+    return view('index');
+});
+
 route::get('/dashboard', [App\Http\Controllers\LandingPageController::class, 'index']);
 

@@ -70,18 +70,41 @@
         <!-- Hero Section -->
         <section id="hero" class="hero section dark-background">
             <div class="container">
-                <div class="row gy-4">
-                    <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center" data-aos="zoom-out">
-                        <h1>Jadi Asisten Dosen Praktikum? Yuk, Daftar Sekarang!</h1>
-                        <p>Banyak manfaatnya loh!</p>
-                        <div class="d-flex">
-                            <a href="#about" class="btn-get-started">Daftar Sekarang</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-out" data-aos-delay="200">
-                        <img src="{{ asset('assets/img/hero.png') }}" class="img-fluid animated" alt="">
-                    </div>
-                </div>
+                <table class="table caption-top table-striped">
+                    <caption>List of users</caption>
+                    <thead class="table-light">
+                      <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Nama</th>
+                        <th scope="col">NPM</th>
+                        <th scope="col">IP Semester</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Telepon</th>
+                        <th scope="col">Jenis Kelamin</th>
+                        <th scope="col">Tanggal Lahir</th>
+                        <th scope="col">Status Aktif</th>
+                        <th scope="col">Pendaftaran</th>
+                        <th scope="col">Pembaharuan</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                        @foreach($data as $dt)
+                        <tr>
+                            <td>{{$dt->id}}</td>
+                            <td>{{$dt->nama}}</td>
+                            <td>{{$dt->npm}}</td>
+                            <td>{{$dt->ip_semester}}</td>
+                            <td>{{$dt->email}}</td>
+                            <td>{{$dt->telepon}}</td>
+                            <td>{{$dt->jenis_kelamin}}</td>
+                            <td>{{$dt->tanggal_lahir}}</td>
+                            <td>{{$dt->status_aktif}}</td>
+                            <td>{{$dt->pendaftaran}}</td>
+                            <td>{{$dt->pembaharuan}}</td>
+                        </tr>
+                        @endforeach
+                    </tbody>
+                  </table>
             </div>
         </section>
         <section style="padding-top: 0cm; padding-bottom: 0cm; position: fixed; bottom: 0; width: 100%; align-items: center" >
@@ -91,6 +114,7 @@
                 </div>
             </footer>
         </section>
+        
     </main>
 
     <!-- Scroll Top -->
