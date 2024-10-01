@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>W A P</title>
+    <title>P A P</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
     <link href="{{ asset('assets/img/unib.png') }}" rel="icon">
