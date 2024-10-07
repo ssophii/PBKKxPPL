@@ -25,7 +25,7 @@
   <!-- inject:css -->
   <link rel="stylesheet" href="{{ asset('assets/css/vertical-layout-light/style.css') }}">
   <!-- endinject -->
-  <link rel="shortcut icon" href="{{ asset('assets/images/favicon.png') }}"/>
+  <link rel="shortcut icon" href="{{ asset('assets/img/iconpap1.png') }}"/>
 </head>
 <body>
   <div class="container-scroller">
@@ -180,22 +180,22 @@
                         <td>{{$dt->tanggal_lahir}}</td>
                         <td>{{$status}}</td>
                         <td>
-                          <button class="btn btn-warning mr-2"><a href="{{ route('edit', $dt->id) }}">edit</a></button>
-                          <form action="{{ route('destroy', $dt->id) }}" method="POST">
-                            @csrf
-                            @method('DELETE')
-                            <button class="btn btn-danger mr-2">hapus</button>
-                          </form>
-                          {{-- <button class="btn btn-danger">Cancel</button> --}}
-                        </td>
+                          <div class="d-flex justify-content-between">
+                              <a href="{{ route('edit', $dt->id) }}" class="btn btn-warning flex-fill mr-2 text-center">Edit</a>
+                              <form action="{{ route('destroy', $dt->id) }}" method="POST" class="flex-fill mr-2">
+                                  @csrf
+                                  @method('DELETE')
+                                  <button type="submit" class="btn btn-danger w-100">Hapus</button>
+                              </form>
+                          </div>
+                      </td>
                     </tr>
                     @endforeach
                 </tbody>
             </table>
-            <button class="btn btn-primary mr-2" style="float: right">
-              <a href="{{ route('create') }}"></a>
+            <a class="btn btn-primary mr-2" style="float: right; margin-top: 10px" href="{{ route('create') }}">
               Tambah
-            </button>
+            </a>
         </div>
         <!-- content-wrapper ends -->
         <!-- partial:partials/_footer.html -->

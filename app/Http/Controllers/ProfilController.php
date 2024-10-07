@@ -29,7 +29,7 @@ class ProfilController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
+        $validated = $request->validate([
             'nama' => 'required',
             'npm' => 'required',
             'semester' => 'required',
@@ -40,10 +40,10 @@ class ProfilController extends Controller
             'tanggal_lahir' => 'required',
             'aktif' => 'required',
         ]);
-        $profil = Profil::create($request->all());
-        if($profil) {
-            return redirect()->route('store')->with('success', 'Data profil berhasil ditambahkan');
-        }
+
+        Profil::create($validated);
+
+        return redirect()->route('profil')->with('success', 'Data profil berhasil ditambahkan');
     }
 
     /**
@@ -91,6 +91,6 @@ class ProfilController extends Controller
     public function destroy(Profil $profil)
     {
         $profil->delete();
-        return redirect()->route('buku')->with('success', 'Data buku berhasil dihapus');
+        return redirect()->route('profil')->with('success', 'Data buku berhasil dihapus');
     }
 }

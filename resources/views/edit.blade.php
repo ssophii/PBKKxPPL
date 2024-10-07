@@ -25,7 +25,7 @@
     <!-- inject:css -->
     <link rel="stylesheet" href="{{ asset('assets/css/vertical-layout-light/style.css') }}">
     <!-- endinject -->
-    <link rel="shortcut icon" href="{{ asset('assets/images/favicon.png') }}"/>
+    <link rel="shortcut icon" href="{{ asset('assets/img/iconpap1.png') }}"/>
 </head>
 <body>
   <div class="container-scroller">
@@ -160,18 +160,27 @@
                       <div class="form-group">
                         <label for="nama">Nama</label>
                         <input type="text" name="nama" class="form-control" id="nama" placeholder="Nama" value="{{ $profil->nama }}">
+                        @error('nama')
+                          {{ $message }}
+                        @enderror
                       </div>
                       <div class="form-group">
                         <label for="npm">NPM</label>
                         <input type="text" name="npm" class="form-control" id="npm" placeholder="NPM" value="{{ $profil->npm }}">
+                        @error('npm')
+                          {{ $message }}
+                        @enderror
                       </div>
                       <div class="form-group">
                         <label for="semester">Semester</label>
                         <input type="number" name="semester" class="form-control" id="semester" placeholder="Semester" value="{{ $profil->semester }}">
+                        @error('semester')
+                          {{ $message }}
+                        @enderror
                       </div>
                       <div class="form-group">
                         <label for="ips">IP Semester</label>
-                        <input type="text" name="ip_semester" class="form-control" id="ips" placeholder="IP Semester saat ini" value="{{ $profil->ip_semester }}">
+                        <input type="number" name="ip_semester" class="form-control" id="ips" placeholder="IP Semester saat ini" min="0" max="4" step="0.01" value="{{ $profil->ip_semester }}">
                       </div>
                       <div class="form-group">
                         <label for="email">Email</label>
@@ -184,21 +193,21 @@
                       <div class="form-group">
                         <label for="jk">Jenis Kelamin</label>
                           <select class="form-control" name="jenis_kelamin" id="jk">
-                            <option>Laki-Laki</option>
-                            <option>Perempuan</option>
+                            <option value="Laki-Laki">Laki-Laki</option>
+                            <option value="Perempuan">Perempuan</option>
                           </select>
                       </div>
                       <div class="form-group">
                         <label for="ttl">Tanggal Lahir</label>
-                        <input type="date" name="tanggal_lahir" class="form-control" id="ttl" placeholder="Tanggal Lahir">
+                        <input type="date" name="tanggal_lahir" class="form-control" id="ttl" placeholder="Tanggal Lahir" value="{{ $profil->tanggal_lahir }}">
                       </div>
                       <div class="form-group">
                         <label for="status">Status Keaktifan</label>
-                          <select class="form-control" name="aktif" id="status">
-                            <option value="1">Aktif</option>
-                            <option value="0">Tidak Aktif</option>
-                          </select>
-                        </div>
+                        <select class="form-control" name="aktif" id="status">
+                            <option value="1" {{ old('aktif', $profil->aktif) == 1 ? 'selected' : '' }}>Aktif</option>
+                            <option value="0" {{ old('aktif', $profil->aktif) == 0 ? 'selected' : '' }}>Tidak Aktif</option>
+                        </select>
+                    </div>
                       <button type="submit" value="simpan" class="btn btn-primary mr-2">Simpan</button>
                     </form>
                   </div>

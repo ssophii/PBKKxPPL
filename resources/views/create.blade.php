@@ -429,7 +429,7 @@
                       </div>
                       <div class="form-group">
                         <label for="ips">IP Semester</label>
-                        <input type="text" name="ip_semester" class="form-control" id="ips" placeholder="IP Semester saat ini">
+                        <input type="number" name="ip_semester" class="form-control" id="ips" placeholder="IP Semester saat ini" min="0" max="4" step="0.01">
                       </div>
                       <div class="form-group">
                         <label for="email">Email</label>
@@ -442,8 +442,8 @@
                       <div class="form-group">
                         <label for="jk">Jenis Kelamin</label>
                           <select class="form-control" name="jenis_kelamin" id="jk">
-                            <option>Laki-Laki</option>
-                            <option>Perempuan</option>
+                            <option value="Laki-Laki">Laki-Laki</option>
+                            <option value="Perempuan">Perempuan</option>
                           </select>
                       </div>
                       <div class="form-group">
@@ -456,7 +456,7 @@
                             <option value="1">Aktif</option>
                             <option value="0">Tidak Aktif</option>
                           </select>
-                        </div>
+                      </div>
                       <button type="submit" value="simpan" class="btn btn-primary mr-2">Daftar</button>
                       <button class="btn btn-light">Cancel</button>
                     </form>
