@@ -57,9 +57,12 @@ class ProfilController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(Profil $profil)   
     {
-        //
+        return view(
+            'edit',
+            ['profil' => $profil]
+        );
     }
 
     /**
@@ -67,14 +70,27 @@ class ProfilController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $validated = $request->validate([
+            // 'judul' => 'required',
+            // 'penulis' => 'required',
+            // 'penerbit' => 'required',
+            // 'sinopsis' => 'required',
+            // 'tahun' => 'required',
+            // 'stok' => 'required',
+            // 'status' => 'required',
+        ]);
+        $buku = Profil::find($id);
+        // dd($buku);
+        $buku->update($request->all()); //
+        return redirect()->route('profil')->with('success', 'Data buku berhasil diubah');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Profil $profil)
     {
-        //
+        $profil->delete();
+        return redirect()->route('buku')->with('success', 'Data buku berhasil dihapus');
     }
 }
