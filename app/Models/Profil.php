@@ -18,6 +18,14 @@ class Profil extends Model
         'telepon',
         'jenis_kelamin',
         'tanggal_lahir',
-        'aktif'
+        'aktif',
+        'matkul_id'
         ];
+
+    // Eloquent Relationships == One to Many
+    public function matkul()
+    {
+        return $this->belongsTo(Matkul::class);
+    }
 }
+

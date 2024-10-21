@@ -146,7 +146,6 @@
       <!-- partial -->
       <div class="main-panel">
         <div class="content-wrapper">
-          
             <table id="Data Pendaftaran" class="display" style="width:100%">
                 <thead>
                     <tr>
@@ -159,6 +158,7 @@
                         <th scope="col">Jenis Kelamin</th>
                         <th scope="col">Tanggal Lahir</th>
                         <th scope="col">Status Aktif</th>
+                        <th scope="col">Matkul</th>
                         <th scope="col">Aksi</th>
                     </tr>
                 </thead>
@@ -179,6 +179,7 @@
                         <td>{{$dt->jenis_kelamin}}</td>
                         <td>{{$dt->tanggal_lahir}}</td>
                         <td>{{$status}}</td>
+                        <td>{{$dt->matkul->matkul}}</td>
                         <td>
                           <div class="d-flex justify-content-between">
                               <a href="{{ route('edit', $dt->id) }}" class="btn btn-warning flex-fill mr-2 text-center">Edit</a>

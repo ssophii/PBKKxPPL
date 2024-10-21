@@ -22,6 +22,7 @@ return new class extends Migration
             $table->enum('jenis_kelamin', ['Laki-laki', 'Perempuan']);
             $table->date('tanggal_lahir');
             $table->boolean('aktif')->default(true);
+            $table->foreignIdFor(\App\Models\Matkul::class, 'matkul_id')->constrained()->onDelete('cascade');
             $table->timestamps();
         });
     }
